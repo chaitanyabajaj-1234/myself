@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+<h1>Registration Form</h1>
+
+<form>
+
+    <div>
+        <label for="username">User Name</label>
+        <input type="text" name="username" id="username" required>
+    </div>
+
+    <br>
+
+    <div>
+        <label for="pwd">Password</label>
+        <input type="password" name="pwd" id="pwd" required>
+        <br>
+        <input type="checkbox" onclick="togglePassword()"> Show Password
+    </div>
+
+    <br>
+
+    <div>
+        <label for="dob">D.O.B</label>
+        <input type="date" name="dob" id="dob">
+    </div>
+
+    <br>
+
+    <div>
+        <label>Gender</label><br>
+        <input type="radio" name="gen" id="male" value="Male">
+        <label for="male">Male</label><br>
+
+        <input type="radio" name="gen" id="female" value="Female">
+        <label for="female">Female</label><br>
+
+        <input type="radio" name="gen" id="trans" value="Transgender">
+        <label for="trans">Transgender</label>
+    </div>
+
+    <br>
+
+    <button type="submit">SUBMIT</button>
+    <button type="reset">RESET</button>
+
+</form>
+
+<script>
+function togglePassword() {
+    var pwd = document.getElementById("pwd");
+    if (pwd.type === "password") {
+        pwd.type = "text";
+    } else {
+        pwd.type = "password";
+    }
+}
+</script>
+
+</body>
+</html>
